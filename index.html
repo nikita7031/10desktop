@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10</title>
+    <link rel="icon" type="image/x-icon" href="shell32_35.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="something">
+        <!-- <img src="./hatoba-tsugu-channel-raining-back-streets-umbrella-anime-20933-3840x2160.jpg" alt="wallpaper"> -->
+    </div>
+    <div id="tray">
+        <div class="hoverbtn" id="winbtn">
+            <div id="winbtn_img"></div>
+        </div>
+        <div id="right_tray">
+            <div class="hoverbtn" id="tray_more">
+                <div id="tray_more_img"></div>
+            </div>
+            <div class="hoverbtn" id="internet">
+                <div id="internet_img"></div>
+            </div>
+            <div class="hoverbtn" id="volume">
+                <div id="volume_img"></div>
+            </div>
+            <div id="volume_toast">
+                <div id="volume_header">Динамики (Realtek(R) Audio)
+                    <div id="tray_more_img" class="pxup"></div>
+                </div>
+                <div id="volume_section">
+                    <div id="volume_toast_icon"></div>
+                    <input type="range" class="slider-progress" id="main_volume" min="0" max="100" value="100">
+                    <div id="volume_toast_number">100</div>
+                </div>      
+            </div>
+            <div class="hoverbtn" id='keyboard_layout'>ENG</div>
+            <div class="hoverbtn" id="tray_time">
+                <div id="tray_time_up">0:00</div>
+                <div id="tray_time_down">01.01.2000</div>
+            </div>
+            <div class="hoverbtn" id="notifications">
+                <div id="notifications_img"></div>
+            </div>
+            <div class="hoverbtn" id="minimize_all"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
+<!-- Я думаю, что картинки и кнопки должны быть как одно целое. И дата не должна обновляться каждую секунду-->

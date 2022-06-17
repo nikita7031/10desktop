@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+#something{
+    width: 960px;
+    height: 540px;
+    background-image: url(./hatoba-tsugu-channel-raining-back-streets-umbrella-anime-20933-3840x2160.jpg);
+    background-size: cover;
+}
+
+#tray{
+    background-color: rgb(16, 16, 16);
+    height: 40px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hoverbtn:hover{
+    background-color: rgb(39, 39, 39);
+}
+
+@keyframes traybtn_anim_out {
+    0%{
+        background-color: rgb(39, 39, 39);;
+    }
+    100%{
+        background-color: rgb(16, 16, 16);
+    }
+}
+
+.hoverbtn:not(:hover){
+    animation: traybtn_anim_out 0.1s linear;
+}
+
+
+#winbtn{
+    width: 48px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#winbtn_img{
+    height: 16px;
+    width: 16px;
+    background: url(./winbtn.png) no-repeat 0px 0px;
+}
+
+#winbtn:hover #winbtn_img{
+    background: url(./winbtn.png) no-repeat -16px 0px;
+}
+
+
+#right_tray{
+    display: flex;
+    cursor: default;
+    user-select: none;
+}
+
+
+#tray_more{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+}
+
+#tray_more_img{
+    width: 12px;
+    height: 7px;
+    background: url(./tray_icons.png) no-repeat -32px 0px;
+}
+
+#internet{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    margin-left: 1px;
+}
+
+#internet_img{
+    width: 16px;
+    height: 16px;
+    background: url(./tray_icons.png) no-repeat -16px 0px;
+}
+
+@keyframes volume_popup {
+    0%{
+        transform: translate(-134px, 0px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-134px, -101px);
+        opacity: 1;
+    }
+}
+
+#volume{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    margin-left: 2px;
+}
+
+#volume_img{
+    width: 16px;
+    height: 16px;
+    background: url(./tray_icons.png) no-repeat 0px -16px;
+}
+
+#volume_toast{
+    position: absolute;
+    width: 360px;
+    height: 100px;  
+    background-color: rgb(31, 31, 31);
+    transform: translate(-134px, -101px);
+    border: rgb(59, 59, 59) solid;
+    border-width: 1px 0 0 1px;
+    /* z-index: -100; */
+    /* animation: volume_popup 0.25s ease 2s forwards; */
+}
+
+#volume_header{
+    color: #fff;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-size: 15px;
+    filter: blur(0.1px);
+}
+
+.pxup{
+    margin-bottom: 1px;
+}
+
+#volume_header:hover{
+    background-color: rgb(76, 76, 76);
+}
+
+input[type=range]#main_volume{
+    height: 56px;
+    width: 232px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    margin: 0;
+}
+
+input[type=range]#main_volume.slider-progress{
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--value) - var(--min)) / var(--range));
+    --sx: calc(var(--ratio) * 100%);
+}
+
+input[type=range]#main_volume:focus{
+    outline: none;
+}
+
+input[type=range]#main_volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 24px;
+    border-radius: 4px;
+    background: rgb(0, 120, 215);
+    margin-top: -11px;
+}
+
+input[type=range]#main_volume::-webkit-slider-runnable-track {
+    height: 2px;
+    background: rgb(121, 121, 121);
+}
+
+input[type=range]#main_volume::-webkit-slider-thumb:hover {
+    background: #FFFFFF;
+}
+
+
+input[type=range]#main_volume.slider-progress::-webkit-slider-runnable-track {
+    background: linear-gradient(#429ce3,#429ce3) 0/var(--sx) 100% no-repeat, #797979;
+}
+
+#volume_toast_icon{
+    width: 24px;
+    height: 24px;
+    background: url(./volume.png) no-repeat -72px 0px;
+    margin: 0 18px -1px 23px;
+}
+
+#volume_section{
+    display: flex;
+    height: 56px;
+    align-items: center;
+}
+
+#volume_toast_number{
+    width: 57px;
+    color: #fff;
+    font-size: 23px;
+    filter: blur(0.1px);
+    display: flex;
+    margin-bottom: 4px;
+    justify-content: center;
+
+}
+
+
+#keyboard_layout{
+    color: #fff;
+    filter: blur(0.1px);
+    display: flex;
+    align-items: center;
+    font-size: 11.6px;
+    padding: 0 6px 0 7px;
+    margin-left: 1px;
+}
+
+#tray_time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 11.6px;
+    padding: 2px 6px 4px 5px;
+    filter: blur(0.1px);
+}
+
+#tray_time:hover{
+    background-color: rgb(39, 39, 39);
+}
+
+#notifications{
+    width: 40px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#notifications_img{
+    width: 16px;
+    height: 16px;
+    background: url(./tray_icons.png) no-repeat 0px 0px; 
+}
+
+#minimize_all{
+    margin-left: 8px;
+    width: 4px;
+    height: inherit;
+    border-left: rgb(112, 112, 112) 1px solid;
+}
+
+/* Write a class for hover buttons */
